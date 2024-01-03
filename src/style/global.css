@@ -1,0 +1,25 @@
+
+body{
+    height: 100%;
+}
+.active-pagination {
+    color: white;
+    border-color: #00a9aa;
+    background-color: #00a9aa;
+    cursor: default;
+    transform: scale(1.01);
+  }
+
+.loading-icon{
+    animation: loading 1.2s linear infinite;
+}
+
+@keyframes loading {
+    from {
+      transform: rotate(0);
+    }
+    
+    to {
+      transform: rotate(360deg);
+    }
+  }

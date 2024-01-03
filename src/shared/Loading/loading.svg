@@ -1,0 +1,18 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10" stroke="#F6F6F6" stroke-width="4"/>
+<path d="M5 19.0711C6.158 20.2339 7.58372 21.092 9.15087 21.5694C10.718 22.0468 12.3782 22.1287 13.9844 21.8079C15.5906 21.487 17.0932 20.7734 18.3592 19.7301C19.6251 18.6868 20.6153 17.3462 21.242 15.8268C21.8687 14.3075 22.1126 12.6564 21.952 11.0198C21.7915 9.38324 21.2315 7.81166 20.3217 6.4443C19.4119 5.07694 18.1803 3.956 16.736 3.18079C15.2917 2.40557 13.6793 2 12.0416 2" stroke="url(#paint0_linear_3639_45684)" stroke-width="4" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_3639_45684" x1="10.1944" y1="21.5238" x2="8.27405" y2="3.9082" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2496FF"/>
+<stop offset="1" stop-color="#2496FF" stop-opacity="0"/>
+</linearGradient>
+</defs>
+  <animateTransform
+    from="0 0 0"
+    to="360 0 0"
+    attributeName="transform"
+    type="rotate"
+    repeatCount="indefinite"
+    dur="1300ms"
+  />
+</svg>
