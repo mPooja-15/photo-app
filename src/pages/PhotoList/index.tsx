@@ -61,12 +61,12 @@ export const PhotoList = () => {
     <div className="container mx-auto pt-10 px-4 max-[991px]:min-w-full">
       <PagesBackButton />
       <div className=" flex items-center max-[576px]:flex-col-reverse	">
-      <Title title={(albumTitle as any)?.title} />
+        <Title title={(albumTitle as any)?.title} />
       </div>
       <div className=" relative  pt-30 w-80vw flex flex-wrap justify-center items-center gap-[30px] my-10  max-[576px]:gap-8 max-[425px]:gap-4 max-[1024px]:gap-5">
         {isLoading && <Loading />}
         {userData && (
-          <div className="w-80 h-80 bg-[#00a9aa] rounded-md border-2 border-solid border-black p-5">
+          <div className="w-80 h-80 max-[1440px]:w-[282px] max-[1440px]:h-[282px]  bg-[#00a9aa] rounded-md border-2 border-solid border-black p-5 max-[768px]:w-full">
             <div className="">
               <h2 className="text-[24px] text-white border-b border-white font-semibold pb-2 mb-6">
                 Author Details
