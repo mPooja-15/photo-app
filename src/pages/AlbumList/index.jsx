@@ -36,7 +36,7 @@ export const AlbumList = () => {
 
   return (
     <div className="container mx-auto max-[576px]:w-full max-[576px]:px-4 pt-10 px-4">
-      {/* {isLoading && <Loading />} */}
+      {isLoading && <Loading />}
 
       <div className="grid grid-cols-3 gap-[30px] max-[768px]:grid-cols-2 max-[425px]:grid-cols-1">
         {currentAlbums.map(({ id, title }) => {
