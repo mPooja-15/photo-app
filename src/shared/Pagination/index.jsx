@@ -1,12 +1,6 @@
-import { SetStateAction } from "react";
 
-type Pages = {
-  pages: number;
-  currentPage: number;
-  setCurrentPage: React.Dispatch<SetStateAction<number>>;
-};
 
-export const Pagination = ({ pages, currentPage, setCurrentPage }: Pages) => {
+ const Pagination = ({ pages, currentPage, setCurrentPage }) => {
   return (
     <div className="flex flex-wrap justify-center w-[80vw] my-[30px] mb-0 mx-auto">
       {Array.from({ length: pages }).map((_, index) => (
@@ -23,3 +17,4 @@ export const Pagination = ({ pages, currentPage, setCurrentPage }: Pages) => {
     </div>
   );
 };
+export default Pagination

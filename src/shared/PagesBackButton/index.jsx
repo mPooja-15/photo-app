@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import HomeIcon from "./home.svg";
 import NextIcon from "./next-icon.svg";
 
-export const PagesBackButton = ({ classNameCustome }: any) => {
+ const PagesBackButton = ({ classNameCustome }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -36,3 +36,4 @@ export const PagesBackButton = ({ classNameCustome }: any) => {
     </>
   );
 };
+export default PagesBackButton

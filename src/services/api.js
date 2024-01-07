@@ -7,21 +7,21 @@ export const api = {
     return response.data
   },
 
-  async getAlbumTitle(albumID: string) {
+  async getAlbumTitle(albumID) {
     const response = await axiosInstance(`/albums/${albumID}`)
     return response.data
   },
 
-  async getPhotos(albumID: string) {
+  async getPhotos(albumID) {
     const response = await axiosInstance(`albums/${albumID}/photos`)
     return response.data
   },
 
-  async getPhoto(photoID: string) {
+  async getPhoto(photoID) {
     const response = await axiosInstance(`/photos/${photoID}`)
     return response.data
   },
-  async getUser(userId: string) {
+  async getUser(userId) {
     const response = await axiosInstance(`/users/${userId}`)
     return response.data
   }

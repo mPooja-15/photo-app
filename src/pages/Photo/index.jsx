@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { api } from "services/api";
-import { PagesBackButton } from "shared/PagesBackButton";
-import { Loading } from "shared/Loading";
-import { Title } from "shared/Title";
+import { api } from "../../services/api";
+import PagesBackButton from "../../shared/PagesBackButton";
+import Loading from "../../shared/Loading";
+import Title from "../../shared/Title";
 
-import PhotoType from "types/PhotoType";
 
 export const Photo = () => {
-  const [photo, setPhoto] = useState<PhotoType>();
+  const [photo, setPhoto] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const { photoID } = useParams();
 

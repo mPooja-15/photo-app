@@ -1,5 +1,5 @@
 import { Header } from "./pages/Header"
-import { GlobalLayout } from "routes/GlobalLayout"
+import GlobalLayout from "./routes/GlobalLayout"
 import "./index.css"
 import "./style/global.css"
 

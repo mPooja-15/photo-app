@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { api } from "services/api";
+import { api } from "../../services/api";
 
-import { ScrollToTop } from "shared/ScrollToTop";
-import { PagesBackButton } from "shared/PagesBackButton";
-import { Loading } from "shared/Loading";
-import { Title } from "shared/Title";
+import ScrollToTop from "../../shared/ScrollToTop";
+import PagesBackButton from "../../shared/PagesBackButton";
+import Loading from "../../shared/Loading";
+import Title from "../../shared/Title";
 
-import Photo from "types/PhotoType";
-import UserType from "types/UserTypes";
 
 export const PhotoList = () => {
-  const [photos, setPhotos] = useState<Photo[]>([]);
+  const [photos, setPhotos] = useState([]);
   const [albumTitle, setAlbumTitle] = useState("");
-  const [userData, setUserData] = useState<UserType[]>([]);
+  const [userData, setUserData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { albumID } = useParams();
 
@@ -40,12 +38,12 @@ export const PhotoList = () => {
   }, [albumID]);
 
   useEffect(() => {
-    if ((albumTitle as any)?.userId) {
+    if (albumTitle?.userId) {
       try {
         const getUserList = async () => {
-          if ((albumTitle as any)?.userId) {
+          if (albumTitle?.userId) {
             setIsLoading(true);
-            const userInfo = await api.getUser((albumTitle as any)?.userId);
+            const userInfo = await api.getUser(albumTitle?.userId);
             if (userInfo) {
               setUserData(userInfo);
               setIsLoading(false);
@@ -55,13 +53,13 @@ export const PhotoList = () => {
         getUserList();
       } catch (err) {}
     }
-  }, [(albumTitle as any)?.userId]);
+  }, [albumTitle?.userId]);
 
   return (
     <div className="container mx-auto pt-10 px-4 max-[991px]:min-w-full">
       <PagesBackButton />
       <div className=" flex items-center max-[576px]:flex-col-reverse	">
-        <Title title={(albumTitle as any)?.title} />
+        <Title title={albumTitle?.title} />
       </div>
       <div className=" relative  pt-30 w-80vw flex flex-wrap justify-center items-center gap-[30px] my-10  max-[576px]:gap-8 max-[425px]:gap-4 max-[1024px]:gap-5">
         {isLoading && <Loading />}
@@ -75,16 +73,16 @@ export const PhotoList = () => {
                 <h3 className="font-semibold text-white text-[18px]">Info:</h3>
                 <ul className="text-white text-[16px]">
                   <li className="pb-1">
-                    Name: <em>{(userData as any)?.name}</em>
+                    Name: <em>{userData?.name}</em>
                   </li>
                   <li className="pb-1">
-                    Email: <em>{(userData as any)?.email}</em>
+                    Email: <em>{userData?.email}</em>
                   </li>
                   <li className="pb-1">
-                    Phone: <em>{(userData as any)?.phone}</em>
+                    Phone: <em>{userData?.phone}</em>
                   </li>
                   <li className="pb-1">
-                    Website: <em>{(userData as any)?.website}</em>
+                    Website: <em>{userData?.website}</em>
                   </li>
                 </ul>
               </div>
